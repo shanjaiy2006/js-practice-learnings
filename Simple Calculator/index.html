@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator App</title>
+  </head>
+  <body>
+    <h1>Welcome to the Simple Calculator App</h1>
+
+    <h3>Enter two numbers to perform calculations:</h3>
+    <input type="number" id="num1" placeholder="Enter first number" />
+    <input type="number" id="num2" placeholder="Enter second number" />
+
+    <br /><br />
+    <button id="add" onclick="performCalculation('add')">Add</button>
+    <button id="subtract" onclick="performCalculation('subtract')">
+      Subtract
+    </button>
+    <button id="multiply" onclick="performCalculation('multiply')">
+      Multiply
+    </button>
+    <button id="divide" onclick="performCalculation('divide')">Divide</button>
+    <button id="clear" onclick="clearResults()">Clear</button>
+
+    <p id="results">Result:</p>
+  </body>
+  <script src="./script.js"></script>
+</html>

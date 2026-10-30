@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CountDown Timer</title>
+  </head>
+  <body>
+    <h1>Timer App</h1>
+    <input
+      type="number"
+      placeholder="Enter a value in seconds"
+      id="seconds"
+      min="1"
+    />
+    <p id="display">00:00</p>
+    <button onclick="startBtn()">Start</button>
+    <button onclick="pauseBtn()">Pause</button>
+    <button onclick="resetBtn()">Reset</button>
+    <p id="message"></p>
+    <script src="script.js"></script>
+  </body>
+</html>
