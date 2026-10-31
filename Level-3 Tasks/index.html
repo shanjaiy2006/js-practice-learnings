@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Level 3 - DOM Events</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+
+      section {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+      }
+
+      button {
+        margin: 5px;
+        padding: 8px 12px;
+        cursor: pointer;
+      }
+
+      input,
+      select {
+        padding: 8px;
+        margin: 5px;
+      }
+
+      .item {
+        padding: 8px;
+        margin: 5px;
+        background-color: #eee;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Level 3: DOM Events & Forms 🚀</h1>
+
+    <!-- TASK 21 -->
+    <section>
+      <h2>21. Click Events</h2>
+      <button id="clickBtn">Click Me</button>
+      <p id="clickResult">Button not clicked yet.</p>
+    </section>
+
+    <!-- TASK 22 -->
+    <section>
+      <h2>22. Input Events</h2>
+      <input id="liveInput" type="text" placeholder="Type something..." />
+      <p id="liveResult">Your text will appear here.</p>
+    </section>
+
+    <!-- TASK 23 -->
+    <section>
+      <h2>23. Form Submit & preventDefault()</h2>
+      <form id="myForm">
+        <input
+          id="nameInput"
+          type="text"
+          placeholder="Enter your name"
+          required
+        />
+        <button type="submit">Submit</button>
+      </form>
+      <p id="formResult"></p>
+    </section>
+
+    <!-- TASK 24 -->
+    <section>
+      <h2>24. Form Validation</h2>
+      <input id="emailInput" type="text" placeholder="Enter an email" />
+      <button id="validateBtn">Validate Email</button>
+      <p id="validationResult"></p>
+    </section>
+
+    <!-- TASK 25 -->
+    <section>
+      <h2>25. Keyboard Events</h2>
+      <input id="keyInput" type="text" placeholder="Press any key here" />
+      <p id="keyResult">Your key will appear here.</p>
+    </section>
+
+    <!-- TASK 26 -->
+    <section>
+      <h2>26. Mouse Events</h2>
+      <div id="mouseBox" class="item">Move your mouse over me!</div>
+      <p id="mouseResult">Waiting for mouse...</p>
+    </section>
+
+    <!-- TASK 27 -->
+    <section>
+      <h2>27. Checkbox Change Event</h2>
+      <label>
+        <input id="agreeCheckbox" type="checkbox" />
+        I agree to the terms
+      </label>
+      <p id="checkboxResult">Not checked yet.</p>
+    </section>
+
+    <!-- TASK 28 -->
+    <section>
+      <h2>28. Dropdown Change Event</h2>
+      <select id="colorSelect">
+        <option value="">Choose a color</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+      </select>
+      <p id="colorResult">Choose a color above.</p>
+    </section>
+
+    <!-- TASK 29 -->
+    <section>
+      <h2>29. Event Delegation</h2>
+      <div id="itemContainer">
+        <button class="item" data-name="Apple">Apple</button>
+        <button class="item" data-name="Mango">Mango</button>
+        <button class="item" data-name="Orange">Orange</button>
+      </div>
+      <p id="itemResult">Click a fruit.</p>
+    </section>
+
+    <!-- TASK 30 -->
+    <section>
+      <h2>30. removeEventListener()</h2>
+      <button id="startBtn">Start Listening</button>
+      <button id="stopBtn">Stop Listening</button>
+      <p id="listenerResult">Click Start, then click this paragraph.</p>
+      <p id="listenerStatus">Listener is stopped.</p>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
