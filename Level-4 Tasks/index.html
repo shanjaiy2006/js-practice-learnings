@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - Level 4 Projects</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background: #f4f4f4;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      section {
+        background: white;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 650px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+      }
+
+      input,
+      textarea,
+      select,
+      button {
+        padding: 9px;
+        margin: 5px 0;
+        font-size: 15px;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      li {
+        margin: 8px 0;
+      }
+
+      .completed {
+        text-decoration: line-through;
+        color: gray;
+      }
+
+      .tab-content {
+        display: none;
+        padding: 10px;
+        background: #eee;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .tab-button.active {
+        background: #333;
+        color: white;
+      }
+
+      .accordion-content {
+        display: none;
+        padding: 10px;
+        background: #eee;
+      }
+
+      #modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        justify-content: center;
+        align-items: center;
+      }
+
+      #modalContent {
+        background: white;
+        padding: 25px;
+        border-radius: 8px;
+        max-width: 350px;
+      }
+
+      .gallery-image {
+        width: 100px;
+        height: 80px;
+        object-fit: cover;
+        cursor: pointer;
+        margin: 5px;
+      }
+
+      #mainImage {
+        width: 100%;
+        max-width: 400px;
+        display: block;
+        margin-top: 10px;
+      }
+
+      #calculator {
+        max-width: 260px;
+      }
+
+      #calculatorDisplay {
+        width: 90%;
+        text-align: right;
+        font-size: 22px;
+      }
+
+      .calculator-buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+      }
+
+      .calculator-buttons button {
+        padding: 15px;
+      }
+
+      .error {
+        color: red;
+      }
+
+      .success {
+        color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>JavaScript DOM - Level 4 Projects</h1>
+
+    <!-- TASK 31: TO-DO LIST -->
+    <section>
+      <h2>Task 31 - To-Do List</h2>
+
+      <input type="text" id="taskInput" placeholder="Enter a task" />
+      <button id="addTaskBtn">Add Task</button>
+
+      <ul id="taskList"></ul>
+
+      <button id="clearTasksBtn">Clear All Tasks</button>
+      <p id="todoMessage"></p>
+    </section>
+
+    <!-- TASK 32: CHARACTER COUNTER -->
+    <section>
+      <h2>Task 32 - Character Counter</h2>
+
+      <textarea
+        id="messageInput"
+        rows="4"
+        maxlength="100"
+        placeholder="Type something..."
+      ></textarea>
+
+      <p>Characters: <span id="charCount">0</span> / 100</p>
+    </section>
+
+    <!-- TASK 33: SEARCH / FILTER LIST -->
+    <section>
+      <h2>Task 33 - Search and Filter List</h2>
+
+      <input type="text" id="searchInput" placeholder="Search a name..." />
+
+      <ul id="nameList">
+        <li>Arun</li>
+        <li>Rahul</li>
+        <li>Priya</li>
+        <li>Divya</li>
+        <li>Karthik</li>
+        <li>Vijay</li>
+      </ul>
+
+      <p id="searchMessage"></p>
+    </section>
+
+    <!-- TASK 34: TABS -->
+    <section>
+      <h2>Task 34 - Tabs</h2>
+
+      <button class="tab-button active" data-tab="home">Home</button>
+      <button class="tab-button" data-tab="about">About</button>
+      <button class="tab-button" data-tab="contact">Contact</button>
+
+      <div id="home" class="tab-content active">
+        <h3>Home</h3>
+        <p>Welcome to the home tab.</p>
+      </div>
+
+      <div id="about" class="tab-content">
+        <h3>About</h3>
+        <p>This is the about section.</p>
+      </div>
+
+      <div id="contact" class="tab-content">
+        <h3>Contact</h3>
+        <p>This is the contact section.</p>
+      </div>
+    </section>
+
+    <!-- TASK 35: ACCORDION -->
+    <section>
+      <h2>Task 35 - Accordion</h2>
+
+      <button class="accordion-button">What is JavaScript?</button>
+      <div class="accordion-content">
+        <p>
+          JavaScript is a programming language used to make web pages
+          interactive.
+        </p>
+      </div>
+
+      <button class="accordion-button">What is DOM?</button>
+      <div class="accordion-content">
+        <p>
+          DOM stands for Document Object Model. It represents the HTML page as
+          objects.
+        </p>
+      </div>
+
+      <button class="accordion-button">What is an Event Listener?</button>
+      <div class="accordion-content">
+        <p>
+          An event listener runs a function when a particular event happens.
+        </p>
+      </div>
+    </section>
+
+    <!-- TASK 36: MODAL POPUP -->
+    <section>
+      <h2>Task 36 - Modal Popup</h2>
+
+      <button id="openModalBtn">Open Modal</button>
+
+      <div id="modal">
+        <div id="modalContent">
+          <h3>Welcome!</h3>
+          <p>This is a modal popup.</p>
+          <button id="closeModalBtn">Close</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TASK 37: IMAGE GALLERY -->
+    <section>
+      <h2>Task 37 - Image Gallery</h2>
+
+      <p>Click an image to display it below.</p>
+
+      <div id="gallery">
+        <img
+          class="gallery-image"
+          src="https://picsum.photos/id/1015/400/250"
+          alt="Mountain landscape"
+        />
+
+        <img
+          class="gallery-image"
+          src="https://picsum.photos/id/1016/400/250"
+          alt="Forest landscape"
+        />
+
+        <img
+          class="gallery-image"
+          src="https://picsum.photos/id/1018/400/250"
+          alt="Nature landscape"
+        />
+      </div>
+
+      <img
+        id="mainImage"
+        src="https://picsum.photos/id/1015/400/250"
+        alt="Selected gallery image"
+      />
+    </section>
+
+    <!-- TASK 38: CALCULATOR -->
+    <section>
+      <h2>Task 38 - Calculator</h2>
+
+      <div id="calculator">
+        <input type="text" id="calculatorDisplay" value="0" readonly />
+
+        <div class="calculator-buttons">
+          <button data-value="7">7</button>
+          <button data-value="8">8</button>
+          <button data-value="9">9</button>
+          <button data-operator="/">÷</button>
+
+          <button data-value="4">4</button>
+          <button data-value="5">5</button>
+          <button data-value="6">6</button>
+          <button data-operator="*">×</button>
+
+          <button data-value="1">1</button>
+          <button data-value="2">2</button>
+          <button data-value="3">3</button>
+          <button data-operator="-">−</button>
+
+          <button data-value="0">0</button>
+          <button data-value=".">.</button>
+          <button id="calculateBtn">=</button>
+          <button data-operator="+">+</button>
+
+          <button id="clearCalculatorBtn">Clear</button>
+        </div>
+      </div>
+
+      <p id="calculatorMessage"></p>
+    </section>
+
+    <!-- TASK 39: COUNTDOWN TIMER -->
+    <section>
+      <h2>Task 39 - Countdown Timer</h2>
+
+      <input
+        type="number"
+        id="countdownInput"
+        placeholder="Enter seconds"
+        min="1"
+      />
+
+      <button id="startTimerBtn">Start</button>
+      <button id="stopTimerBtn">Stop</button>
+      <button id="resetTimerBtn">Reset</button>
+
+      <h3 id="timerDisplay">00:00</h3>
+      <p id="timerMessage"></p>
+    </section>
+
+    <!-- TASK 40: FORM VALIDATION -->
+    <section>
+      <h2>Task 40 - Form Validation</h2>
+
+      <form id="registrationForm">
+        <div>
+          <label for="userName">Name:</label><br />
+          <input type="text" id="userName" placeholder="Enter your name" />
+          <p id="nameError" class="error"></p>
+        </div>
+
+        <div>
+          <label for="userEmail">Email:</label><br />
+          <input type="text" id="userEmail" placeholder="Enter your email" />
+          <p id="emailError" class="error"></p>
+        </div>
+
+        <div>
+          <label for="userPassword">Password:</label><br />
+          <input
+            type="password"
+            id="userPassword"
+            placeholder="Enter password"
+          />
+          <p id="passwordError" class="error"></p>
+        </div>
+
+        <button type="submit">Register</button>
+      </form>
+
+      <p id="formMessage"></p>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
