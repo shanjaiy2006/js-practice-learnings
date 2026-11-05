@@ -1,0 +1,89 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 650px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 15px;
+}
+
+button {
+    cursor: pointer;
+}
+
+li {
+    margin: 10px 0;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.delete-btn {
+    background: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.complete-btn {
+    background: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.spacer {
+    height: 450px;
+}
+
+#observeBox {
+    background: #dbeafe;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    opacity: 0.3;
+    transition: opacity 0.5s;
+}
+
+#observeBox.visible {
+    opacity: 1;
+}
+
+#mutationResult {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+#screenWidth {
+    color: #2563eb;
+}
+
+@media (max-width: 500px) {
+    body {
+        margin: 8px;
+    }
+
+    input {
+        max-width: 90%;
+    }
+}

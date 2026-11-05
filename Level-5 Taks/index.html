@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM - Level 5</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Level 5 - Advanced DOM 🚀</h1>
+      <p>My JavaScript Task Manager</p>
+    </header>
+
+    <main>
+      <!-- TASK 41 & 42: LOCAL STORAGE -->
+      <section>
+        <h2>41 & 42 - LocalStorage</h2>
+
+        <input type="text" id="usernameInput" placeholder="Enter your name" />
+
+        <button id="saveNameBtn">Save Name</button>
+        <button id="removeNameBtn">Remove Name</button>
+
+        <p id="usernameResult">No username saved.</p>
+      </section>
+
+      <!-- TASK 43, 44 & 45: ARRAY, UUID, EVENT DELEGATION -->
+      <section>
+        <h2>43, 44 & 45 - Task Manager</h2>
+
+        <input type="text" id="taskInput" placeholder="Enter a task" />
+
+        <button id="addTaskBtn">Add Task</button>
+
+        <p id="taskMessage"></p>
+
+        <ul id="taskList"></ul>
+
+        <button id="clearTasksBtn">Clear All Tasks</button>
+      </section>
+
+      <!-- TASK 46: MUTATION OBSERVER -->
+      <section>
+        <h2>46 - MutationObserver</h2>
+
+        <p>Add or remove tasks above. This observer watches the task list.</p>
+
+        <p id="mutationResult">Waiting for changes...</p>
+      </section>
+
+      <!-- TASK 47: INTERSECTION OBSERVER -->
+      <section>
+        <h2>47 - IntersectionObserver</h2>
+
+        <p>Scroll down to see the observer detect this box.</p>
+
+        <div class="spacer"></div>
+
+        <div id="observeBox">
+          <h3>You found me!</h3>
+          <p>This element entered the visible screen.</p>
+        </div>
+      </section>
+
+      <!-- TASK 48: WINDOW RESIZE -->
+      <section>
+        <h2>48 - Window Resize</h2>
+
+        <p>Current screen width:</p>
+        <h3 id="screenWidth">0</h3>
+
+        <p id="screenMessage"></p>
+      </section>
+
+      <!-- TASK 49 & 50: FINAL PROJECT -->
+      <section>
+        <h2>49 & 50 - Final DOM Challenge</h2>
+
+        <p>
+          Try adding tasks, completing them, deleting them and refreshing the
+          page.
+        </p>
+
+        <p>Your tasks should remain saved!</p>
+
+        <p id="finalMessage">Your task manager is ready.</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
