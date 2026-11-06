@@ -241,10 +241,3 @@ updateScreenWidth();
 
 // Run whenever browser window is resized
 window.addEventListener("resize", updateScreenWidth);
-
-// ========================================
-// TASK 50 - FINAL PROJECT STATUS
-// ========================================
-
-document.getElementById("finalMessage").textContent =
-  "Task Manager loaded successfully!";
